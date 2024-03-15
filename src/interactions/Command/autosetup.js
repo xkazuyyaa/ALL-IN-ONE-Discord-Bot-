@@ -76,7 +76,7 @@ module.exports = {
         )
         .addSubcommand(subcommand =>
             subcommand
-                .setName('customvoice')
+                .setName('jointocreate')
                 .setDescription('Set the custom voice channels from the server')
         )
         .addSubcommand(subcommand =>
