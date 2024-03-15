@@ -17,15 +17,16 @@ module.exports = async (client, guild) => {
 
   try {
     const embed = new Discord.EmbedBuilder()
-      .setTitle("🟢・Added to a new server!")
+      .setTitle("<:join:1218214506547904533>・Added to a new server!")
       .addFields(
-        { name: "Total servers:", value: `${client.guilds.cache.size}`, inline: true },
-        { name: "Server name", value: `${guild.name}`, inline: true },
-        { name: "Server ID", value: `${guild.id}`, inline: true },
-        { name: "Server members", value: `${guild.memberCount}`, inline: true },
-        { name: "Server owner", value: `<@!${guild.ownerId}> (${guild.ownerId})`, inline: true },
+        { name: "Total Servers:", value: `> ${client.guilds.cache.size}`, inline: false },
+        { name: "Server Name", value: `> ${guild.name}`, inline: false },
+        { name: "Server ID", value: `> ${guild.id}`, inline: false },
+        { name: "Server Members", value: `> ${guild.memberCount}`, inline: false },
+        { name: "Server Swner", value: `> <@!${guild.ownerId}> (${guild.ownerId})`, inline: false },
       )
-      .setThumbnail("https://cdn.discordapp.com/attachments/843487478881976381/852419422392156210/BotPartyEmote.png")
+      .setThumbnail("https://media.discordapp.net/attachments/1162368760754208882/1187340370867134574/light.png")
+      .setImage('https://media.discordapp.net/attachments/1162368760754208882/1218211794905071676/yh.png')
       .setColor(client.config.colors.normal)
     webhookClient.send({
       username: 'Bot Logs',
@@ -51,27 +52,22 @@ module.exports = async (client, guild) => {
           .setStyle(Discord.ButtonStyle.Link),
 
         new Discord.ButtonBuilder()
-          .setLabel("Support server")
+          .setLabel("Support Server")
           .setURL(client.config.discord.serverInvite)
+          .setStyle(Discord.ButtonStyle.Link),
+
+          new Discord.ButtonBuilder()
+          .setLabel("Website")
+          .setURL("https://yokihost.com/")
           .setStyle(Discord.ButtonStyle.Link),
       );
 
     client.embed({
-      title: "Thanks for inviting the bot!",
-      image: "https://cdn.discordapp.com/attachments/843487478881976381/874694194474668052/bot_banner_invite.jpg",
+      title: "Thanks for Choosing us!!",
+      image: "https://media.discordapp.net/attachments/1162368760754208882/1218211794905071676/yh.png",
       fields: [{
-        name: "❓┆How to setup?",
-        value: 'The default prefix = \`/\` \nTo run setups with Bot run \`/setup\`',
-        inline: false,
-      },
-      {
-        name: "☎️┆I need help what now?",
-        value: `You can DM <@755297485328482356> for support or joining the [[Support server]](${client.config.discord.serverInvite})`,
-        inline: false,
-      },
-      {
-        name: "💻┆What are the commands?",
-        value: 'See that list of commands by doing \`/help\`',
+        name: "<:que:1218205537699758182><:arrow_r:1218169812199542904>How to Setup?",
+        value: '> The default prefix: / (slash).\n> Use setups by running: /setup help!',
         inline: false,
       },
       {
@@ -86,6 +82,5 @@ module.exports = async (client, guild) => {
   catch (err) {
     console.log(err);
   }
-
 
 };
