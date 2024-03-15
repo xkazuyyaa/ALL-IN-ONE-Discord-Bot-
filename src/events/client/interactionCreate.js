@@ -61,11 +61,11 @@ module.exports = async (client, interaction) => {
                 if (interaction.options._subcommand !== null && interaction.options.getSubcommand() == "help") {
 
                   let cmd = interaction.client.commands.filter(x => x.data.name == interaction.commandName)
-                    const commands = cmd.map((x) => x.data.options.map((c) => '</' + interaction.commandName + ' ' + c.name + ':' + interaction.id +'> - ' + c.description).join("\n"));
+                    const commands = cmd.map((x) => x.data.options.map((c) => '</' + interaction.commandName + ' ' + c.name + ':' + interaction.id +'> <:circle:1218288053886517268> ' + c.description).join("\n"));
 
                     return client.embed({
-                        title: `❓・Help panel`,
-                        desc: `Get help with the commands in \`${interaction.commandName}\` \n\n${commands}`,
+                        title: `<:que:1218289365004845218><:arrow_r:1218289405186281472>Help Panel`,
+                        desc: `> *Get help with the commands in \`${interaction.commandName}\`!* \n\n> ${commands}`,
                         type: 'reply'
                     }, interaction)
                 }
