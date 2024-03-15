@@ -4,7 +4,7 @@ const Discord = require('discord.js');
 
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName('economy')
+        .setName('eco')
         .setDescription('Play the economy game in your server')
         .addSubcommand(subcommand =>
             subcommand
