@@ -20,7 +20,7 @@ const welcomeRole = require("../../database/models/joinRole");
 module.exports = async (client, interaction, args) => {
     const options = {
         tickets: ticketSchema,
-        customvoice: voiceSchema,
+        jointocreate: voiceSchema,
         serverlogs: logs,
         levellogs: levelLogs,
         boostlogs: boostLogs,
